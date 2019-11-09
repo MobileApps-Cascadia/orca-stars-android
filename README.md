@@ -2,7 +2,7 @@ OrcaStars: a Collaboration Between Orca Conservancy and Cascadia College
 
 App Purpose:
 
-Access information and locations about a growing community of businesses  
+Access information and locations about a growing community of businesses
 dedicated to sustainable practices that will preserve our orca population.
 
 MVP:
@@ -11,24 +11,24 @@ Find OrcaStars businesses nearby
 	-Map zooms to yield significant results
 
 Refine search with categorical filters, including:
-  	-Restaurants
-  	-Bar & Nightlife
-  	-Health & Medical
-  	-Shopping
-  	-Automotive
-  	-Home Maintenance
-  	-Professional Services
+  	- Restaurants
+  	- Bar & Nightlife
+  	- Health & Medical
+  	- Shopping
+  	- Automotive
+  	- Home Maintenance
+  	- Professional Services
 
 View more about a result, including:
-  	-Contact and Location information
-  	-OrcaStars Tenure
-   	-Practices for sustainability
-  	-Hours of operation
-  	-Link to website if available
+  	- Contact and Location information
+  	- OrcaStars Tenure
+   	- Practices for sustainability
+  	- Hours of operation
+  	- Link to website if available
 
 Learn more in the “About” sections
-  	-Requirements for OrcaStars certification
-  	-The Orca Conservancy itself
+  	- Requirements for OrcaStars certification
+  	- The Orca Conservancy itself
 
 User Stories:
 
