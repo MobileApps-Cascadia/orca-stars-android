@@ -1,46 +1,47 @@
-OrcaStars: a Collaboration Between Orca Conservancy and Cascadia College
+	OrcaStars: a Collaboration Between Orca Conservancy and Cascadia College
 
-App Purpose:
+	App Purpose:
 
-Access information and locations about a growing community of businesses
-dedicated to sustainable practices that will preserve our orca population.
+	Access information and locations about a growing community of businesses
+	dedicated to sustainable practices that will preserve our orca population.
 
-MVP:
+	MVP:
 
-Find OrcaStars businesses nearby
-  Map zooms to yield significant results
+	Find OrcaStars businesses nearby
 
-Refine search with categorical filters, including
-  Restaurants
-  Bar & Nightlife
-  Health & Medical
-  Shopping
-  Automotive
-  Home Maintenance
-  Professional Services
+	Map zooms to yield significant results
 
-View more about a result, including
-  Contact and Location information
-  OrcaStars Tenure
-  Practices for sustainability
-  Hours of operation
-  Link to website if available
+	Refine search with categorical filters, including
+	  Restaurants
+	  Bar & Nightlife
+	  Health & Medical
+	  Shopping
+	  Automotive
+	  Home Maintenance
+	  Professional Services
 
-Learn more in the “About” sections
-  Requirements for OrcaStars certification
-  The Orca Conservancy itself
+	View more about a result, including
+	  Contact and Location information
+	  OrcaStars Tenure
+	  Practices for sustainability
+	  Hours of operation
+	  Link to website if available
 
-User Stories:
+	Learn more in the “About” sections
+	  Requirements for OrcaStars certification
+	  The Orca Conservancy itself
+
+	User Stories:
 
 	1. Anise is a marine biologist. She loves marine life, and ever since
-	 she was little, Orcinus orca has been her favorite. She’s always 
-	 upset when she sees in the news that more animals have died from 
-	 eating or choking on plastic. She wants to take a stand and stop 
-	 supporting the companies that contribute to this, but she doesn’t 
-	 know of any nearby places that focus on sustainability to protect 
-	 animals like her beloved orcas. She wants an app that can tell her 
-	 what businesses around her location are dedicated to preserving the 
-	 environment.
+	she was little, Orcinus orca has been her favorite. She’s always 
+	upset when she sees in the news that more animals have died from 
+	eating or choking on plastic. She wants to take a stand and stop 
+	supporting the companies that contribute to this, but she doesn’t 
+	know of any nearby places that focus on sustainability to protect 
+	animals like her beloved orcas. She wants an app that can tell her 
+	what businesses around her location are dedicated to preserving the 
+	environment.
 
 	2. Logan is a highschool student whose highschool recently got 
 	nominated by OrcaStars for their “Go Green” program. He wants to learn
