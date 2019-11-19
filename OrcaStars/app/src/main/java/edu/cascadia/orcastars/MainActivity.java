@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         toolbar.setLogo(R.drawable.orca_stars48);
         setSupportActionBar(toolbar);
 
-
-
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
