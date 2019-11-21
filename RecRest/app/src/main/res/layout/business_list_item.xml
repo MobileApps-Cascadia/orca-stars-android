@@ -6,13 +6,16 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:text="Image"
-            android:layout_weight="2"/>
+            android:layout_weight="2"
+            android:gravity="center"
+            android:src="@drawable/hobbit"/>
 
             <TextView
             android:id="@+id/business_name"
@@ -20,8 +23,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Business Name"
-                android:layout_weight="1"
-                />
+                android:layout_weight="1" />
 
 
     </LinearLayout>

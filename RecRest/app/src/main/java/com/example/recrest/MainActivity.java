@@ -1,53 +1,37 @@
 package com.example.recrest;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button buttonToList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        setContentView(R.layout.activity_main_recyclerview);
+        buttonToList = (Button) findViewById(R.id.buttontolist);
 
-        String[] rests = new String[]{"The Green Bean", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE", "Starbucks", "Washington Coffee Shop", "Sushi and Coffee Cafe",
-                "Hamachi and a Latte", "LATRINE"};
+        buttonToList.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                toBusinessList();
+            }
 
-        BusinessListAdapter myAdapter =
-                new BusinessListAdapter(rests);
+            private void toBusinessList() {
+                Intent NextActivityboi = new Intent(getApplicationContext(),ListOfBusinesses.class);
 
+                startActivity(NextActivityboi);
 
-        RecyclerView myRecyclerView = (RecyclerView) findViewById(R.id.myRecyclerView);
+            }
+        });
 
-        myRecyclerView.setAdapter(myAdapter);
-
-        myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     }
