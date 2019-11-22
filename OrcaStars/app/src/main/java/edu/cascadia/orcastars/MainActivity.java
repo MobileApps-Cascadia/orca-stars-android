@@ -1,18 +1,29 @@
 package edu.cascadia.orcastars;
 
+import androidx.annotation.NonNull;
+
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
 
+    //Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //toolbar.setLogo(R.drawable.orca_stars48);
+        //setSupportActionBar(toolbar);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()
@@ -20,6 +31,18 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .add(R.id.container, new MenuFragment())
                     .commit();
         }
+    }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        return true;
+//    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 
     /**
@@ -34,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container, fragment);
-
         if (addToBackstack) {
             transaction.addToBackStack(null);
         }
@@ -42,4 +64,3 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         transaction.commit();
     }
 }
-
