@@ -15,15 +15,19 @@
             android:text="Image"
             android:layout_weight="2"
             android:gravity="center"
-            android:src="@drawable/hobbit"/>
+            android:src="@drawable/orca_stars"/>
 
-            <TextView
+        <TextView
             android:id="@+id/business_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_weight="1"
             android:text="Business Name"
-                android:layout_weight="1" />
+            android:textColor="@color/colorBlack"
+            android:textSize="25dp"
+            android:layout_marginTop="25dp"
+
+            android:textAlignment="textStart"/>
 
 
     </LinearLayout>

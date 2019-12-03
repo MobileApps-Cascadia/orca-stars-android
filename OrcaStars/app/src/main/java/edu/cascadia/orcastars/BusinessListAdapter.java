@@ -1,4 +1,4 @@
-package com.example.recrest;
+package edu.cascadia.orcastars;
 
 import android.view.LayoutInflater;
 import android.view.View;

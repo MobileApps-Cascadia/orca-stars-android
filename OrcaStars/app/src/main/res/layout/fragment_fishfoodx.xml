@@ -25,7 +25,7 @@
                 android:layout_height="250dp"
                 android:background="@drawable/sushi"/>
 
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/see_all_photos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
                 android:id="@+id/Unfav_icon"
                 style="@style/favicon"
                 android:background="@drawable/ic_star_border_black_48dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_below="@id/sushi"/>
 
             <TextView
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/business_tags"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
                 android:layout_alignLeft="@id/Fishfood_X_title"
                 android:layout_alignStart="@id/Fishfood_X_title"
                 android:layout_below="@id/Fishfood_X_title"
@@ -66,7 +66,7 @@
                 android:id="@+id/Open_until_9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:text="@string/hours_open"
                 style="@style/Standard_Text"
                 android:layout_marginTop="15dp"
@@ -77,8 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/distance_away"
-                android:layout_marginRight="10dp"
-                android:layout_alignRight="@id/Unfav_icon"
+                android:layout_marginEnd="10dp"
+                android:layout_alignEnd="@id/Unfav_icon"
                 android:layout_alignBottom="@+id/Open_until_9"
                 style="@style/Standard_Text"/>
         </RelativeLayout>
@@ -116,7 +116,7 @@
                     android:text="Directions"
                     app:layout_column="3"
                     app:layout_row="0"
-                    android:layout_marginRight="20dp"/>
+                    android:layout_marginEnd="20dp"/>
 
                 <ImageButton
                     android:id="@+id/iconclock"
