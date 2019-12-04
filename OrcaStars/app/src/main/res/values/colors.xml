@@ -17,4 +17,5 @@
     <color name="orcaBelly">#E8E7E8</color>
     <color name="orcaBellyOnColor">#0C0D14</color>
     <color name="orcaBack">#0C0D14</color>
+    <color name="transparent">#0000</color>
 </resources>
