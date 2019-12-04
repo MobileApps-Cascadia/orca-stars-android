@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">OrcaStars</string>
+    <string name="subtitle">by Orca Conservancy</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="star_of_the_month_info">In Harmony Sustainable Landscape\nLandscape Design · 2.1 miles</string>
+    <string name="hours_open">Open until 9pm</string>
+    <string name="business_title">Fishfood X</string>
+    <string name="business_tags">Seafood restaurant, seafood &amp; sushi...</string>
+    <string name="distance_away">2.3 mi</string>
+    <string name="info_para">Fishfood X is dedicated to supporting sustainable fishing, 
+        and giving back by donating to the Orca Conservancy. 
+        All ingredients are 100% organic and ethically sourced. </string>
+    <string name="distance_away_full">2.3 miles away</string>
+    <string name="hours_open_full">8am to 9pm Mon-Sat\n10am to 7pm Sun</string>
+    <string name="phone_fish">(555) 123-1337</string>
+    <string name="location">Bothell, WA</string>
 </resources>

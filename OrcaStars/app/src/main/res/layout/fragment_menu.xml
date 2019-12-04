@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="OrcaStar of the Month"
+                style="@style/OrcaStarOfTheMonth"
+                android:gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/InHarmonyPic"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/hobbit" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/InHarmonyPic"
+                    android:layout_alignLeft="@+id/InHarmonyPic"
+                    android:layout_alignRight="@+id/InHarmonyPic"
+                    android:layout_alignStart="@+id/InHarmonyPic"
+                    android:layout_alignEnd="@id/InHarmonyPic"
+                    android:text="@string/star_of_the_month_info"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Browse By Category"
+                android:layout_marginTop="15dp"
+                style="@style/Categories"
+                android:gravity="center_horizontal"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="50dp">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp">
+                    <ImageButton
+                        android:id="@+id/iconfood"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_local_dining_black_48dp"
+                        app:layout_column="0"
+                        app:layout_row="0" />
+
+                    <ImageButton
+                        android:id="@+id/iconbars"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_local_bar_black_48dp"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <ImageButton
+                        android:id="@+id/iconhealth"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_local_hospital_black_48dp"
+                        app:layout_column="2"
+                        app:layout_row="0" />
+
+                    <ImageButton
+                        android:id="@+id/iconshop"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_shopping_cart_black_48dp"
+                        app:layout_column="3"
+                        app:layout_row="0" />
+
+                    <TextView
+                        android:id="@+id/textfood"
+                        style="@style/categorytext"
+                        app:layout_row="1"
+                        app:layout_column="0"
+                        android:text="Restaurants"/>
+                    <TextView
+                        android:id="@+id/textbar"
+                        style="@style/categorytext"
+                        app:layout_row="1"
+                        app:layout_column="1"
+                        android:text="Bars &amp;\nNightlife"/>
+                    <TextView
+                        android:id="@+id/texthealth"
+                        style="@style/categorytext"
+                        app:layout_row="1"
+                        app:layout_column="2"
+                        android:text="Health &amp;\nMedical"/>
+                    <TextView
+                        android:id="@+id/textshopping"
+                        style="@style/categorytext"
+                        app:layout_row="1"
+                        app:layout_column="3"
+                        android:text="Shopping"/>
+
+                    <ImageButton
+                        android:id="@+id/iconcar"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_directions_car_black_48dp"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <ImageButton
+                        android:id="@+id/iconmaintenance"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_build_black_48dp"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <ImageButton
+                        android:id="@+id/iconservice"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_card_travel_black_48dp"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <ImageButton
+                        android:id="@+id/iconmore"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_more_horiz_black_48dp"
+                        app:layout_column="3"
+                        app:layout_row="2" />
+
+                    <TextView
+                        android:id="@+id/textcar"
+                        style="@style/categorytext"
+                        app:layout_row="3"
+                        app:layout_column="0"
+                        android:text="Automotive"/>
+                    <TextView
+                        android:id="@+id/textwrench"
+                        style="@style/categorytext"
+                        app:layout_row="3"
+                        app:layout_column="1"
+                        android:text="Home\nMaintenance"/>
+                    <TextView
+                        android:id="@+id/textcase"
+                        style="@style/categorytext"
+                        app:layout_row="3"
+                        app:layout_column="2"
+                        android:text="Professional\nServices"/>
+                    <TextView
+                        android:id="@+id/textmore"
+                        style="@style/categorytext"
+                        app:layout_row="3"
+                        app:layout_column="3"
+                        android:text="More"/>
+                </androidx.gridlayout.widget.GridLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:id="@+id/iconhome"
+                style="@style/homeicons"
+                android:background="@drawable/ic_home_black_48dp"
+                android:backgroundTint="@color/colorAccent" />
+
+            <ImageButton
+                android:id="@+id/iconinfo"
+                style="@style/homeicons"
+                android:background="@drawable/ic_info_black_48dp"
+                android:backgroundTint="@color/colorOrcaBelly"
+                android:layout_toRightOf="@+id/iconhome"
+                android:layout_toEndOf="@id/iconhome"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
