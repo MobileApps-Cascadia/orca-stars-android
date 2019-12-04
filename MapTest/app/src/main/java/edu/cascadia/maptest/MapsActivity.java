@@ -30,7 +30,7 @@ import java.util.Map;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
     private Location currentLocation;
-
+    private Location fishFoodXLocation = new Location(LocationManager.GPS_PROVIDER);
     private Location cascadiaLocation = new Location(LocationManager.GPS_PROVIDER);
 
     private FusedLocationProviderClient fusedLocationProviderClient;
@@ -50,6 +50,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         cascadiaLocation.setLatitude(47.7609004);
         cascadiaLocation.setLongitude(-122.1919956);
+        fishFoodXLocation.setLatitude(47.0);
+        fishFoodXLocation.setLongitude(-122.0);
         fetchLastLocation();
     }
 
@@ -78,9 +80,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng latLng = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
         //MarkerOptions are used to create a new Marker.You can specify location, title etc with MarkerOptions
         MarkerOptions markerOptions = new MarkerOptions().position(latLng).title("You are Here");
-        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+
         //Adding the created the marker on the map
         googleMap.addMarker(markerOptions);
+
+        //Adding new location marker for FishFoodX
+
+        LatLng fFoodX = new LatLng(fishFoodXLocation.getLatitude(), fishFoodXLocation.getLongitude());
+        MarkerOptions ffxMarker = new MarkerOptions().position(fFoodX).title("FishFood X");
+
+        googleMap.addMarker(ffxMarker);
+        googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
     }
 
     @Override
