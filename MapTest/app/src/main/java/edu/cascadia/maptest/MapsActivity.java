@@ -33,8 +33,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private Location cascadiaLocation = new Location(LocationManager.GPS_PROVIDER);
 
-
-
     private FusedLocationProviderClient fusedLocationProviderClient;
     private static final int LOCATION_REQUEST_CODE = 101;
 
@@ -53,7 +51,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         cascadiaLocation.setLatitude(47.7609004);
         cascadiaLocation.setLongitude(-122.1919956);
         fetchLastLocation();
-
     }
 
     private void fetchLastLocation(){
@@ -66,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Toast.makeText(MapsActivity.this,currentLocation.getLatitude()+" "+currentLocation.getLongitude(),Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
                     supportMapFragment.getMapAsync(MapsActivity.this);
-                }else{
+                } else {
                     currentLocation = cascadiaLocation;
                     Toast.makeText(MapsActivity.this,"Location set to Cascadia",Toast.LENGTH_SHORT).show();
                     SupportMapFragment supportMapFragment= (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
@@ -98,5 +95,4 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
         }
     }
-
 }
