@@ -50,7 +50,7 @@
                 <androidx.gridlayout.widget.GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="-80dp">
+                    android:paddingRight="-63dp">
 
                     <!--Row 0-->
                     <ImageButton
@@ -130,7 +130,7 @@
                         style="@style/categorytext"
                         app:layout_row="3"
                         app:layout_column="2"
-                        android:text="Automotive"/>
+                        android:text="Auto"/>
                     <!--Row 4-->
                     <ImageButton
                         android:id="@+id/iconmaintenance"
