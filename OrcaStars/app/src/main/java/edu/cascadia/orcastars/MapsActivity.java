@@ -1,4 +1,4 @@
-package edu.cascadia.maptest;
+package edu.cascadia.orcastars;
 
 import androidx.annotation.MainThread;
 import androidx.annotation.NonNull;
