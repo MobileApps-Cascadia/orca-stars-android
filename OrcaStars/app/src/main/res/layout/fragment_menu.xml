@@ -17,32 +17,21 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="OrcaStar of the Month"
-                style="@style/OrcaStarOfTheMonth"
-                android:gravity="center_horizontal"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal">
+                style="@style/Categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Protecting the Orcas is what we do."
+                android:textColor="@color/colorAccentLight"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="15dp"/>
 
                 <ImageButton
-                    android:id="@+id/InHarmonyPic"
+                    android:id="@+id/orcasPic"
                     android:layout_width="300dp"
-                    android:layout_height="150dp"
-                    android:background="@drawable/hobbit" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/InHarmonyPic"
-                    android:layout_alignLeft="@+id/InHarmonyPic"
-                    android:layout_alignRight="@+id/InHarmonyPic"
-                    android:layout_alignStart="@+id/InHarmonyPic"
-                    android:layout_alignEnd="@id/InHarmonyPic"
-                    android:text="@string/star_of_the_month_info"/>
-            </RelativeLayout>
+                    android:layout_height="200dp"
+                    android:background="@drawable/orcas"
+                    android:layout_gravity="center_horizontal"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -51,6 +40,7 @@
                 android:layout_marginTop="15dp"
                 style="@style/Categories"
                 android:gravity="center_horizontal"/>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,111 +50,126 @@
                 <androidx.gridlayout.widget.GridLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp">
+                    android:paddingRight="-80dp">
+
+                    <!--Row 0-->
+                    <ImageButton
+                        android:id="@+id/iconOSotM"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="80dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/orca_stars"
+                        app:layout_column="0"
+                        app:layout_row="0"/>
                     <ImageButton
                         android:id="@+id/iconfood"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_local_dining_black_48dp"
-                        app:layout_column="0"
+                        app:layout_column="1"
                         app:layout_row="0" />
-
                     <ImageButton
                         android:id="@+id/iconbars"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_local_bar_black_48dp"
-                        app:layout_column="1"
-                        app:layout_row="0" />
-
-                    <ImageButton
-                        android:id="@+id/iconhealth"
-                        style="@style/categoryicons"
-                        android:background="@drawable/ic_local_hospital_black_48dp"
                         app:layout_column="2"
                         app:layout_row="0" />
-
-                    <ImageButton
-                        android:id="@+id/iconshop"
-                        style="@style/categoryicons"
-                        android:background="@drawable/ic_shopping_cart_black_48dp"
-                        app:layout_column="3"
-                        app:layout_row="0" />
-
+                    <!--Row 1-->
+                    <TextView
+                        android:id="@+id/textOSotM"
+                        style="@style/categorytext"
+                        app:layout_column="0"
+                        app:layout_row="1"
+                        android:text="Orca Stars\nof the Month"/>
                     <TextView
                         android:id="@+id/textfood"
                         style="@style/categorytext"
+                        app:layout_column="1"
                         app:layout_row="1"
-                        app:layout_column="0"
                         android:text="Restaurants"/>
                     <TextView
                         android:id="@+id/textbar"
                         style="@style/categorytext"
-                        app:layout_row="1"
-                        app:layout_column="1"
-                        android:text="Bars &amp;\nNightlife"/>
-                    <TextView
-                        android:id="@+id/texthealth"
-                        style="@style/categorytext"
-                        app:layout_row="1"
                         app:layout_column="2"
-                        android:text="Health &amp;\nMedical"/>
-                    <TextView
-                        android:id="@+id/textshopping"
-                        style="@style/categorytext"
                         app:layout_row="1"
-                        app:layout_column="3"
-                        android:text="Shopping"/>
-
+                        android:text="Bars &amp;\nNightlife"/>
+                    <!--Row 2-->
+                    <ImageButton
+                        android:id="@+id/iconhealth"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_local_hospital_black_48dp"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+                    <ImageButton
+                        android:id="@+id/iconshop"
+                        style="@style/categoryicons"
+                        android:background="@drawable/ic_shopping_cart_black_48dp"
+                        app:layout_column="1"
+                        app:layout_row="2" />
                     <ImageButton
                         android:id="@+id/iconcar"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_directions_car_black_48dp"
-                        app:layout_column="0"
+                        app:layout_column="2"
                         app:layout_row="2" />
-
+                    <!--Row 3-->
+                    <TextView
+                        android:id="@+id/texthealth"
+                        style="@style/categorytext"
+                        app:layout_column="0"
+                        app:layout_row="3"
+                        android:text="Health &amp;\nMedical"/>
+                    <TextView
+                        android:id="@+id/textshopping"
+                        style="@style/categorytext"
+                        app:layout_column="1"
+                        app:layout_row="3"
+                        android:text="Shopping"/>
+                    <TextView
+                        android:id="@+id/textcar"
+                        style="@style/categorytext"
+                        app:layout_row="3"
+                        app:layout_column="2"
+                        android:text="Automotive"/>
+                    <!--Row 4-->
                     <ImageButton
                         android:id="@+id/iconmaintenance"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_build_black_48dp"
-                        app:layout_column="1"
-                        app:layout_row="2" />
+                        app:layout_column="0"
+                        app:layout_row="4" />
 
                     <ImageButton
                         android:id="@+id/iconservice"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_card_travel_black_48dp"
-                        app:layout_column="2"
-                        app:layout_row="2" />
+                        app:layout_column="1"
+                        app:layout_row="4" />
 
                     <ImageButton
                         android:id="@+id/iconmore"
                         style="@style/categoryicons"
                         android:background="@drawable/ic_more_horiz_black_48dp"
-                        app:layout_column="3"
-                        app:layout_row="2" />
-
-                    <TextView
-                        android:id="@+id/textcar"
-                        style="@style/categorytext"
-                        app:layout_row="3"
-                        app:layout_column="0"
-                        android:text="Automotive"/>
+                        app:layout_column="2"
+                        app:layout_row="4" />
+                    <!--Row 5-->
                     <TextView
                         android:id="@+id/textwrench"
                         style="@style/categorytext"
-                        app:layout_row="3"
-                        app:layout_column="1"
+                        app:layout_row="5"
+                        app:layout_column="0"
                         android:text="Home\nMaintenance"/>
                     <TextView
                         android:id="@+id/textcase"
                         style="@style/categorytext"
-                        app:layout_row="3"
-                        app:layout_column="2"
+                        app:layout_row="5"
+                        app:layout_column="1"
                         android:text="Professional\nServices"/>
                     <TextView
                         android:id="@+id/textmore"
                         style="@style/categorytext"
-                        app:layout_row="3"
-                        app:layout_column="3"
+                        app:layout_row="5"
+                        app:layout_column="2"
                         android:text="More"/>
                 </androidx.gridlayout.widget.GridLayout>
             </RelativeLayout>
