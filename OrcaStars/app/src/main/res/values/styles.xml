@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MainPageButtons">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:capitalize">words</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+<style name="Titleview">
+    <item name="android:textSize">30dp</item>
+    <item name="android:textColor">@color/colorBlack</item>
+    <item name="android:layout_marginTop">15dp</item>
+    <item name="android:layout_marginLeft">20dp</item>
+</style>
+    <style name="OrcaStarOfTheMonth">
+        <item name="android:textColor">@color/colorAccentLight</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="searchtext">
+        <item name="android:textColor">@color/colorOrcaBack</item>
+        <item name="android:textColorHint">@color/colorOrcaBack</item>
+        <item name="android:textColorLink">@color/colorOrcaBack</item>
+    </style>
+    <style name="Categories">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="categoryicons">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="business_page_icons">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+    <style name="homeicons">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="favicon">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+    <style name="Standard_Text">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="categorytext">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
