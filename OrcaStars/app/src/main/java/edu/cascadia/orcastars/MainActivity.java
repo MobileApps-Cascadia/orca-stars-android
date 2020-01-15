@@ -11,6 +11,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .add(R.id.container, new MenuFragment())
                     .commit();
         }
-    }
+        }
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {

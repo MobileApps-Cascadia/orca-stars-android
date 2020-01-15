@@ -34,7 +34,9 @@
                 android:layout_alignEnd="@id/sushi"
                 android:layout_alignRight="@+id/sushi"
                 android:layout_alignBottom="@+id/sushi"
-                android:layout_margin="20dp"/>
+                android:layout_margin="20dp"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/colorPrimary"/>
 
             <TextView
                 android:id="@+id/Fishfood_X_title"
@@ -116,7 +118,9 @@
                     android:text="Directions"
                     app:layout_column="3"
                     app:layout_row="0"
-                    android:layout_marginEnd="20dp"/>
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/colorPrimary"/>
 
                 <ImageButton
                     android:id="@+id/iconclock"
