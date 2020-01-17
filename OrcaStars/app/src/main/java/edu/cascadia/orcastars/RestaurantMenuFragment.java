@@ -35,13 +35,13 @@ public class RestaurantMenuFragment extends Fragment {
                 "MTT Café",
         };
         Integer[] logos = new Integer[]{
-                R.drawable.ic_build_black_48dp,
-                R.drawable.ic_call_black_48dp,
-                R.drawable.ic_card_travel_black_48dp,
-                R.drawable.ic_error_black_48dp,
-                R.drawable.ic_directions_car_black_48dp,
-                R.drawable.ic_help_black_48dp,
-                R.drawable.ic_home_black_48dp
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48
         };
 
 
