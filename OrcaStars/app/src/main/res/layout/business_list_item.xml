@@ -10,8 +10,9 @@
         android:paddingBottom="10dp">
 
         <ImageView
+            android:id="@+id/business_logo"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:text="Image"
             android:layout_weight="2"
             android:gravity="center"

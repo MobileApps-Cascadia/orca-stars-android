@@ -1,6 +1,7 @@
 package edu.cascadia.orcastars;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -24,12 +25,28 @@ public class RestaurantMenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_restaurant_menu, container, false);
 
-        String[] rests = new String[]{"FishFood X","The Green Bean", "Starstuck", "Grillby's", "Another Sushi Place",
-                "Burgerbox", "MTT Café",
+        String[] rests = new String[]{
+                "FishFood X",
+                "The Green Bean",
+                "Starstuck",
+                "Grillby's",
+                "Another Sushi Place",
+                "Burgerbox",
+                "MTT Café",
+        };
+        Integer[] logos = new Integer[]{
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48
         };
 
-        BusinessListAdapter myAdapter =
-                new BusinessListAdapter(rests);
+
+        BusinessLogoAdapter myAdapter =
+                new BusinessLogoAdapter(logos, rests);
 
 
         RecyclerView myRecyclerView = (RecyclerView) view.findViewById(R.id.myRecyclerView);
