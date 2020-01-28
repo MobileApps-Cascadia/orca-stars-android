@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:id="@+id/SelectedItem"
+        android:background="@color/transparent" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -12,11 +18,12 @@
         <ImageView
             android:id="@+id/business_logo"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:text="Image"
             android:layout_weight="2"
             android:gravity="center"
-            android:src="@drawable/orca_stars"/>
+            android:src="@drawable/orca_stars"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/business_name"
@@ -33,4 +40,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
