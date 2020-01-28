@@ -25,12 +25,24 @@ public class MoreMenuFragment extends Fragment {
                 "Shopping",
                 "Food",
                 "Health & Medical",
-                "Home Maintence",
+                "Home Maintenence",
                 "Professional Services",
-                "Auto"
-                
+                "Auto",
+                "Hotels & Travel",
+                "Real Estate",
+                "Pets",
+                "Financial Service",
+                "Mass Media",
+                "Religious Organization"
+
         };
         Integer[] logos = new Integer[]{
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
+                R.drawable.orca_stars48,
                 R.drawable.orca_stars48,
                 R.drawable.orca_stars48,
                 R.drawable.orca_stars48,
