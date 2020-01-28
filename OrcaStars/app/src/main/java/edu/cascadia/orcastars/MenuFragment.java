@@ -23,7 +23,7 @@ public class MenuFragment extends Fragment {
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new AboutUsFragment(), true);
+                //((NavigationHost) getActivity()).navigateTo(new AboutUsFragment(), true);
             }
         });
 

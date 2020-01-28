@@ -5,7 +5,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="85dp"
             android:id="@+id/SelectedItem"
             android:background="@color/transparent" />
 
@@ -18,11 +18,12 @@
         <ImageView
             android:id="@+id/business_logo"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="70dp"
             android:text="Image"
             android:layout_weight="2"
             android:gravity="center"
-            android:src="@drawable/orca_stars"/>
+            android:src="@drawable/orca_stars"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/business_name"

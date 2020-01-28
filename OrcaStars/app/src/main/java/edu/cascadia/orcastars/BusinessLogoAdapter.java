@@ -40,7 +40,7 @@ public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapte
     public BusinessLogoAdapter.RestaurantViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
         View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.business_list_item, parent, false);
 
-        final ViewHolder holdViewOfBusinessListItem = new ViewHolder(LayoutView);
+        final RestaurantViewHolder holdViewOfBusinessListItem = new RestaurantViewHolder(LayoutView);
         Button goToBusiness = LayoutView.findViewById(R.id.SelectedItem);
         goToBusiness.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,12 +53,7 @@ public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapte
 
             }
         });
-
-
-
-
-
-        return new BusinessLogoAdapter.RestaurantViewHolder(LayoutView);
+        return holdViewOfBusinessListItem;
     }
 
     @Override
