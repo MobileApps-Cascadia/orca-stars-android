@@ -1,8 +1,11 @@
 package edu.cascadia.orcastars;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,8 +37,27 @@ public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapte
 
     @NonNull
     @Override
-    public BusinessLogoAdapter.RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BusinessLogoAdapter.RestaurantViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
         View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.business_list_item, parent, false);
+
+        final ViewHolder holdViewOfBusinessListItem = new ViewHolder(LayoutView);
+        Button goToBusiness = LayoutView.findViewById(R.id.SelectedItem);
+        goToBusiness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int indexOfClickedItem = holdViewOfBusinessListItem.getAdapterPosition();
+                switch(indexOfClickedItem){
+                    case 0:
+                        ((NavigationHost) parent.getContext()).navigateTo(new FishfoodxFragment(), true);
+                }
+
+            }
+        });
+
+
+
+
+
         return new BusinessLogoAdapter.RestaurantViewHolder(LayoutView);
     }
 

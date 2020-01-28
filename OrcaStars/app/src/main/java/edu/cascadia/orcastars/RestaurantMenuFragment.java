@@ -56,13 +56,7 @@ public class RestaurantMenuFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         myRecyclerView.setLayoutManager(layoutManager);
 
-        Button nextButton = view.findViewById(R.id.nextPage);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new FishfoodxFragment(), true);
-            }
-        });
+
 
 
         return view;
