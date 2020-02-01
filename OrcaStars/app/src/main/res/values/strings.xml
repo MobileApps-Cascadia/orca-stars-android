@@ -14,7 +14,11 @@
     <string name="phone_fish">(555) 123-1337</string>
     <string name="location">Bothell, WA</string>
     <string name="FRONTEND_HOST">https://www.orcaconservancy.org/5-2/orca-stars/</string>
-    <string name="about_us_description">About Us</string>
+    <string name="about_us">About Us:</string>
+    <string name="description">Orca Conservancy’s mission is to help businesses adapt better
+        practices that will make a positive impact on the critical habitat where our Southern
+        Resident Orcas live. We believe, together, we can do our part to improve the quality
+        of the Salish Sea.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
