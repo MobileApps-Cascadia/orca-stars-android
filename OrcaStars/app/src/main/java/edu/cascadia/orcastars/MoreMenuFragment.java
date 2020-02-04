@@ -23,34 +23,33 @@ public class MoreMenuFragment extends Fragment {
                 "Restaurants",
                 "Bars & Nightlife",
                 "Shopping",
-                "Food",
                 "Health & Medical",
                 "Home Maintenence",
                 "Professional Services",
                 "Auto",
                 "Hotels & Travel",
-                "Real Estate",
                 "Pets",
                 "Financial Service",
                 "Mass Media",
-                "Religious Organization"
+                "Religious Organization",
+                "Education"
 
         };
         Integer[] logos = new Integer[]{
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48
+                R.drawable.ic_local_dining_black_48dp,
+                R.drawable.ic_local_bar_black_48dp,
+                R.drawable.ic_shopping_cart_black_48dp,
+                R.drawable.ic_local_hospital_black_48dp,
+                R.drawable.ic_build_black_48dp,
+                R.drawable.ic_card_travel_black_48dp,
+                R.drawable.ic_directions_car_black_48dp,
+                R.drawable.ic_flight_black_48dp,
+                R.drawable.ic_pets_black_48dp,
+                R.drawable.ic_attach_money_black_48dp,
+                R.drawable.ic_perm_media_black_48dp,
+                R.drawable.ic_add_black_48dp,
+                R.drawable.ic_school_black_48dp
+
         };
 
 
