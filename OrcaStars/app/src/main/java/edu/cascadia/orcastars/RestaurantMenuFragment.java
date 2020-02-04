@@ -35,13 +35,13 @@ public class RestaurantMenuFragment extends Fragment {
                 "MTT Café",
         };
         Integer[] logos = new Integer[]{
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48,
-                R.drawable.orca_stars48
+                R.drawable.fishfood_x,
+                R.drawable.the_green_bean,
+                R.drawable.starstuck,
+                R.drawable.grillbys,
+                R.drawable.another_sushi_place,
+                R.drawable.burgerbox,
+                R.drawable.mtt_cafe
         };
 
 
@@ -56,13 +56,7 @@ public class RestaurantMenuFragment extends Fragment {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         myRecyclerView.setLayoutManager(layoutManager);
 
-        Button nextButton = view.findViewById(R.id.nextPage);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new FishfoodxFragment(), true);
-            }
-        });
+
 
 
         return view;
