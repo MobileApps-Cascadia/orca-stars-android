@@ -31,7 +31,6 @@ public class MoreMenuFragment extends Fragment {
                 "Pets",
                 "Financial Service",
                 "Mass Media",
-                "Religious Organization",
                 "Education"
 
         };
@@ -47,7 +46,6 @@ public class MoreMenuFragment extends Fragment {
                 R.drawable.ic_pets_black_48dp,
                 R.drawable.ic_attach_money_black_48dp,
                 R.drawable.ic_perm_media_black_48dp,
-                R.drawable.ic_add_black_48dp,
                 R.drawable.ic_school_black_48dp
 
         };
