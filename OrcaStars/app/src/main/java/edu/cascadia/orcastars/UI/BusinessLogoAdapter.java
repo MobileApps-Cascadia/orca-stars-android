@@ -1,7 +1,5 @@
-package edu.cascadia.orcastars;
+package edu.cascadia.orcastars.UI;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import edu.cascadia.orcastars.NavigationHost;
+import edu.cascadia.orcastars.R;
 
 public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapter.RestaurantViewHolder>{
     public class RestaurantViewHolder extends RecyclerView.ViewHolder {
