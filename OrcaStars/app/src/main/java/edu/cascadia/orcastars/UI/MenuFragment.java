@@ -21,6 +21,7 @@ public class MenuFragment extends Fragment {
 
         ImageButton aboutButton = view.findViewById(R.id.iconinfo);
         ImageButton foodButton = view.findViewById(R.id.iconfood);
+        ImageButton moreButton = view.findViewById(R.id.iconmore);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +36,14 @@ public class MenuFragment extends Fragment {
                 ((NavigationHost) getActivity()).navigateTo(new RestaurantMenuFragment(), true);
             }
         });
+
+         moreButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+                 ((NavigationHost) getActivity()).navigateTo(new MoreMenuFragment(), true);
+             }
+         });
+
         return view;
 
     }
