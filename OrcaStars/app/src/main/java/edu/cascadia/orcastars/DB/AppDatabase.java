@@ -48,7 +48,7 @@ public abstract class AppDatabase extends RoomDatabase {
                             addDelay();
                             //Generate data for pre-population
                             AppDatabase database = AppDatabase.getInstance(appContext, executors);
-                            List<BusinessEntity> businesses = DataRepository.generateBusinesses();
+                            List<BusinessEntity> businesses = BusinessData.generateBusinesses();
                             insertData(database, businesses);
                             database.setDatabaseCreated();
                         });

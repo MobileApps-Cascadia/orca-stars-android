@@ -5,8 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "businesses")
-/*Uncomment implement section when business Interface has been created*/
-public class BusinessEntity /*implements Business*/{
+public class BusinessEntity implements Business{
     @PrimaryKey
     private int id;
     private String name;
@@ -26,7 +25,7 @@ public class BusinessEntity /*implements Business*/{
         this.logo = logo;
         this.photo = photo;
     }
-    /*
+
     public BusinessEntity(Business business){
         this.id = business.getId();
         this.name = business.getName();
@@ -36,7 +35,6 @@ public class BusinessEntity /*implements Business*/{
         this.logo = business.getLogo();
         this.photo = business.getPhoto();
     }
-    Uncomment when Business interface is added*/
 
     public BusinessEntity(){};
 
