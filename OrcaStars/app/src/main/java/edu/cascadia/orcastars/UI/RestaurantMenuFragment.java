@@ -1,8 +1,5 @@
-package edu.cascadia.orcastars;
+package edu.cascadia.orcastars.UI;
 
-import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 
-import com.google.android.material.button.MaterialButton;
+import edu.cascadia.orcastars.R;
+import edu.cascadia.orcastars.UI.BusinessLogoAdapter;
 
 public class RestaurantMenuFragment extends Fragment {
     @Override

@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars;
+package edu.cascadia.orcastars.UI;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import edu.cascadia.orcastars.NavigationHost;
+import edu.cascadia.orcastars.R;
 
 
 public class MenuFragment extends Fragment {
