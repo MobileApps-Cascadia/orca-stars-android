@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 
 import androidx.lifecycle.LiveData;
@@ -6,7 +6,6 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.OnConflictStrategy;
-import edu.cascadia.orcastars.DB.BusinessEntity;
 
 import java.util.List;
 
@@ -23,4 +22,8 @@ public interface BusinessDAO {
 
     @Query("SELECT * FROM businesses WHERE id = :businessId")
     BusinessEntity loadBusinessSync(int businessId);
+
+    @Query("SELECT businesses.* FROM businesses JOIN businessesFts ON (businesses.id = businessesFts.rowid) "
+            + "WHERE businessesFts MATCH :query")
+    LiveData<List<BusinessEntity>> searchAllBusinesses(String query);
 }

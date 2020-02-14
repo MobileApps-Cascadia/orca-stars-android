@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
 
-public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapter.RestaurantViewHolder>{
+public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapter.RestaurantViewHolder>{
     public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         public RestaurantViewHolder(@NonNull View itemView) {
@@ -29,24 +29,24 @@ public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapte
     private Integer[] tempDataLogo;
     private String[] tempDataName;
 
-    BusinessLogoAdapter(Integer[] intInput, String[] stringInput){
+    BusinessListAdapter(Integer[] intInput, String[] stringInput){
         tempDataLogo = intInput;
         tempDataName = stringInput;
     }
 
     @NonNull
     @Override
-    public BusinessLogoAdapter.RestaurantViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
+    public BusinessListAdapter.RestaurantViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, int viewType) {
         View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.business_list_item, parent, false);
 
-        final RestaurantViewHolder holdViewOfBusinessListItem = new BusinessLogoAdapter.RestaurantViewHolder(LayoutView);
+        final RestaurantViewHolder holdViewOfBusinessListItem = new BusinessListAdapter.RestaurantViewHolder(LayoutView);
         Button goToBusiness = LayoutView.findViewById(R.id.SelectedItem);
         goToBusiness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int indexOfClickedItem = holdViewOfBusinessListItem.getAdapterPosition();
                 switch(indexOfClickedItem){
-                    case 0:
+                    case 1:
                         ((NavigationHost) parent.getContext()).navigateTo(new FishfoodxFragment(), true);
                 }
 
@@ -57,7 +57,7 @@ public class BusinessLogoAdapter extends RecyclerView.Adapter<BusinessLogoAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BusinessLogoAdapter.RestaurantViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BusinessListAdapter.RestaurantViewHolder holder, int position) {
         holder.restaurantLogo.setImageResource(tempDataLogo[position]);
         holder.restaurantName.setText(tempDataName[position]);
     }

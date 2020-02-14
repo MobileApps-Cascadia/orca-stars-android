@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
+import edu.cascadia.orcastars.model.Business;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
@@ -28,8 +29,17 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .commit();
         }
 
-        }
+    }
 
+    public void show(Business business) {
+        BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack("business")
+                .replace(R.id.fragment_container,
+                        businessFragment, null).commit();
+    }
 
     @Override
     public boolean onSupportNavigateUp() {

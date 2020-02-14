@@ -1,11 +1,13 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import edu.cascadia.orcastars.model.Business;
+
 @Entity(tableName = "businesses")
-public class BusinessEntity implements Business{
+public class BusinessEntity implements Business {
     @PrimaryKey
     private int id;
     private String name;

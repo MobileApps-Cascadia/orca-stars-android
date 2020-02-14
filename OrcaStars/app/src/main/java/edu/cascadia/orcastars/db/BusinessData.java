@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 import java.util.ArrayList;
 import java.util.List;

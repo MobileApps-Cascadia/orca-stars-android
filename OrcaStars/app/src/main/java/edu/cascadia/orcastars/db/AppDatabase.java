@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 import android.content.Context;
 
@@ -14,7 +14,6 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.List;
 
 import edu.cascadia.orcastars.AppExecutors;
-import edu.cascadia.orcastars.DataRepository;
 
 @Database(entities = {BusinessEntity.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

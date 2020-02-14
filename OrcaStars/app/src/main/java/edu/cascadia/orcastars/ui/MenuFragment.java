@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -33,7 +33,7 @@ public class MenuFragment extends Fragment {
         foodButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NavigationHost) getActivity()).navigateTo(new RestaurantMenuFragment(), true);
+                ((NavigationHost) getActivity()).navigateTo(new BusinessListFragment(), true);
             }
         });
 

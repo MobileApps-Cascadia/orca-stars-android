@@ -1,11 +1,9 @@
 package edu.cascadia.orcastars;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import afu.org.checkerframework.checker.igj.qual.I;
-import edu.cascadia.orcastars.DB.AppDatabase;
-import edu.cascadia.orcastars.DB.BusinessEntity;
+import edu.cascadia.orcastars.db.AppDatabase;
+import edu.cascadia.orcastars.db.BusinessEntity;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
@@ -46,6 +44,9 @@ public class DataRepository {
     }
     public LiveData<BusinessEntity> loadBusiness(final int businessId){
         return mDatabase.businessDAO().loadBusiness(businessId);
+    }
+    public LiveData<List<BusinessEntity>> searchBusinesses(String query) {
+        return mDatabase.businessDAO().searchAllBusinesses(query);
     }
 
     }
