@@ -13,6 +13,11 @@ android {
         resValue "string", "FACEBOOK_ID", "OrcaConservancy"
         resValue "string", "TWITTER_ID", "OrcaConservancy"
         resValue "string", "INSTAGRAM_ID", "orcaconservancy"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -69,4 +74,4 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
 
-}
+};

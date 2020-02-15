@@ -2,6 +2,7 @@ package edu.cascadia.orcastars.DB;
 
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "businesses")
@@ -15,6 +16,8 @@ public class BusinessEntity implements Business{
     private int logo;
     private int photo;
 
+
+    @Ignore
     public BusinessEntity(int id, String name, String description,
                           String hours, String location, int logo, int photo){
         this.id = id;
@@ -35,6 +38,9 @@ public class BusinessEntity implements Business{
         this.logo = business.getLogo();
         this.photo = business.getPhoto();
     }
+
+    public BusinessEntity(){}
+
     public int getId() {
         return id;
     }
