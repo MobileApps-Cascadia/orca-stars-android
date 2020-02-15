@@ -35,9 +35,6 @@ public class BusinessEntity implements Business{
         this.logo = business.getLogo();
         this.photo = business.getPhoto();
     }
-
-    public BusinessEntity(){};
-
     public int getId() {
         return id;
     }
@@ -46,30 +43,30 @@ public class BusinessEntity implements Business{
     public String getName() {
         return name;
     }
-    public void setName(){this.name = name;}
+    public void setName(String name){this.name = name;}
 
     public String getDescription() {
         return description;
     }
-    public void setDescription(){this.description = description;}
+    public void setDescription(String description){this.description = description;}
 
     public String getHours() {
         return hours;
     }
-    public void setHours(){this.hours = hours;}
+    public void setHours(String hours){this.hours = hours;}
 
     public String getLocation() {
         return location;
     }
-    public void setLocation(){this.location = location;}
+    public void setLocation(String location){this.location = location;}
 
     public int getLogo() {
         return logo;
     }
-    public void setLogo(){this.logo = logo;}
+    public void setLogo(int logo){this.logo = logo;}
 
     public int getPhoto() {
         return photo;
     }
-    public void setPhoto(){this.photo = photo;}
+    public void setPhoto(int photo){this.photo = photo;}
 }
