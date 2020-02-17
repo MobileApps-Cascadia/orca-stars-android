@@ -3,7 +3,7 @@
     android:id="@+id/aboutUs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.cascadia.orcastars.UI.AboutUsFragment">
+    tools:context="edu.cascadia.orcastars.ui.AboutUsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 

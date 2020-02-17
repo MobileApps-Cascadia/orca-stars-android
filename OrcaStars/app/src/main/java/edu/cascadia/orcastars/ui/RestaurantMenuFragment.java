@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 import android.os.Bundle;
 
@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import edu.cascadia.orcastars.R;
-import edu.cascadia.orcastars.UI.BusinessLogoAdapter;
 
 public class RestaurantMenuFragment extends Fragment {
     @Override

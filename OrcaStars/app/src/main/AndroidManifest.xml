@@ -31,14 +31,14 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBEZRrvVdL0mTkdmlUAJTRN40qcFd-SUQ4" />
 
-        <activity android:name=".UI.MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.MapsActivity"></activity>
+        <activity android:name=".ui.MapsActivity"></activity>
     </application>
 
 </manifest>

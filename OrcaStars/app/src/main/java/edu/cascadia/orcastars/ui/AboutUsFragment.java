@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 
 import android.os.Bundle;

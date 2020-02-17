@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 
 import androidx.room.Entity;
