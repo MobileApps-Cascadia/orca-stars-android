@@ -47,7 +47,7 @@ public class BusinessMoreListAdapter extends RecyclerView.Adapter<BusinessMoreLi
                 int indexOfClickedItem = holdViewOfBusinessListItem.getAdapterPosition();
                 switch(indexOfClickedItem){
                     case 1:
-                        ((NavigationHost) parent.getContext()).navigateTo(new FishfoodxFragment(), true);
+                        ((NavigationHost) parent.getContext()).navigateTo(new BusinessFragment(), true);
                 }
 
             }

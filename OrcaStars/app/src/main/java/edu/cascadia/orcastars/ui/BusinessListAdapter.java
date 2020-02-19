@@ -14,6 +14,10 @@ import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
 
 public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapter.RestaurantViewHolder>{
+
+    public BusinessListAdapter(BusinessClickCallback mBusinessClickCallback) {
+    }
+
     public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         public RestaurantViewHolder(@NonNull View itemView) {
@@ -47,7 +51,7 @@ public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapte
                 int indexOfClickedItem = holdViewOfBusinessListItem.getAdapterPosition();
                 switch(indexOfClickedItem){
                     case 1:
-                        ((NavigationHost) parent.getContext()).navigateTo(new FishfoodxFragment(), true);
+                        ((NavigationHost) parent.getContext()).navigateTo(new BusinessFragment(), true);
                 }
 
             }
