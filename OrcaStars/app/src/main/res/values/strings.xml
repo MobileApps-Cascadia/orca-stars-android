@@ -25,7 +25,7 @@
     <!-- added -->
     <string name="no_comments">No comments</string>
     <string name="loading_businesses">Loading businesses…</string>
-    <string name="search_products_hint">Search Products…</string>
+    <string name="search_businesses_hint">Search Businesses…</string>
     <string name="cd_businesses_list">Businesses list</string>
     <string name="cd_business_name">Name of the business</string>
     <string name="cd_search_businesses">Search businesses</string>

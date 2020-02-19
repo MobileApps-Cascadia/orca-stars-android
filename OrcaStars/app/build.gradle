@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
     defaultConfig {
         applicationId "edu.cascadia.mobas.orcastars"
         minSdkVersion 21
@@ -72,5 +73,4 @@ dependencies {
     implementation "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
     implementation "androidx.room:room-testing:$room_version"
-
 }
