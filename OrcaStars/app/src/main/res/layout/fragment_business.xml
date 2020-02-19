@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="edu.cascadia.orcastars.viewmodel.BusinessViewModel" />
+    </data>
+
+<RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.FishfoodxFragment">
+    tools:context=".ui.BusinessFragment">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -86,11 +94,11 @@
         </RelativeLayout>
 
             <TextView
-                android:id="@+id/fishfoodx_info"
+                android:id="@+id/business_fragment_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Standard_Text"
-                android:text="@string/info_para"
+                android:text="@{viewmodel.business.name}"
                 android:layout_margin="20dp"/>
 
             <androidx.gridlayout.widget.GridLayout
@@ -167,4 +175,6 @@
         </LinearLayout>
 
     </ScrollView>
+
 </RelativeLayout>
+</layout>

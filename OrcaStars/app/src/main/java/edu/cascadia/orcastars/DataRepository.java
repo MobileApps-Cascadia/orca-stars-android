@@ -2,7 +2,6 @@ package edu.cascadia.orcastars;
 
 import java.util.List;
 
-import afu.org.checkerframework.checker.igj.qual.I;
 import edu.cascadia.orcastars.db.AppDatabase;
 import edu.cascadia.orcastars.db.BusinessEntity;
 
