@@ -8,6 +8,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import androidx.databinding.ObservableField;
+
 import edu.cascadia.orcastars.OrcaStarsApp;
 import edu.cascadia.orcastars.DataRepository;
 import edu.cascadia.orcastars.db.BusinessEntity;
@@ -20,6 +22,8 @@ public class BusinessViewModel extends AndroidViewModel {
 
     private final LiveData<BusinessEntity> mObservableBusiness;
 
+    public ObservableField<BusinessEntity> business = new ObservableField<>();
+
     private final int mBusinessId;
 
 
@@ -27,13 +31,16 @@ public class BusinessViewModel extends AndroidViewModel {
                              final int businessId) {
         super(application);
         mBusinessId = businessId;
+
         mObservableBusiness = repository.loadBusiness(mBusinessId);
     }
 
 
-    public LiveData<BusinessEntity> getBusiness() {
+    public LiveData<BusinessEntity> getObservableBusiness() {
         return mObservableBusiness;
     }
+
+    public void setBusiness(BusinessEntity business) {this.business.set(business);}
 
     /**
      * A creator is used to inject the business ID into the ViewModel
