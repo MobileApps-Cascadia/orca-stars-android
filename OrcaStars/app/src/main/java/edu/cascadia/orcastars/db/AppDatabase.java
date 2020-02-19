@@ -21,7 +21,6 @@ public abstract class AppDatabase extends RoomDatabase {
     @VisibleForTesting
     public static final String DATABASE_NAME = "orcastars-db";
     public abstract BusinessDAO businessDAO();
-    public abstract CommentDao commentDao();
     private final MutableLiveData<Boolean> mIsDatabaseCreated = new MutableLiveData<>();
 
     public static AppDatabase getInstance(final Context context, final AppExecutors executors){
