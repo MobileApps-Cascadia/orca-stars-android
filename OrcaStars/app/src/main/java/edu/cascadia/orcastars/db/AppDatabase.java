@@ -15,7 +15,7 @@ import java.util.List;
 
 import edu.cascadia.orcastars.AppExecutors;
 
-@Database(entities = {BusinessEntity.class}, version = 1)
+@Database(entities = {BusinessEntity.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public static AppDatabase sInstance;
     @VisibleForTesting

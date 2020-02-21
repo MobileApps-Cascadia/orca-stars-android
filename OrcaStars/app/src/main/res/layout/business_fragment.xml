@@ -11,7 +11,7 @@
             type="boolean" />
 
         <variable
-            name="BusinessViewModel"
+            name="businessViewModel"
             type="edu.cascadia.orcastars.viewmodel.BusinessViewModel" />
     </data>
 
@@ -23,7 +23,7 @@
 
         <include
             layout="@layout/business_item"
-            app:product="@{businessViewModel.product}"/>
+            app:business="@{businessViewModel.business}"/>
 
         <FrameLayout
             android:layout_width="match_parent"
