@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
@@ -20,6 +21,8 @@ import edu.cascadia.orcastars.R;
 import edu.cascadia.orcastars.databinding.BusinessListFragmentBinding;
 import edu.cascadia.orcastars.db.BusinessEntity;
 import edu.cascadia.orcastars.viewmodel.BusinessListViewModel;
+import edu.cascadia.orcastars.viewmodel.BusinessViewModel;
+import edu.cascadia.orcastars.model.Business;
 
 
 /// red items missing business frag and xml
@@ -45,23 +48,24 @@ public class BusinessListFragment extends Fragment {
     };
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState/*, @NonNull SavedStateHandle savedStateHandle*/) {
         super.onViewCreated(view, savedInstanceState);
-        final BusinessListViewModel viewmodel =
-                new ViewModelProvider(this).get(BusinessListViewModel.class);
+        final BusinessListViewModel viewModel =
+                new ViewModelProvider(this)
+                        .get(BusinessListViewModel.class);
 
         mBinding.businessesSearchBtn.setOnClickListener(v -> {
             Editable query = mBinding.businessesSearchBox.getText();
-            viewmodel.setQuery(query);
+            viewModel.setQuery(query);
         });
-        subscribeUI(viewmodel.getBusinesses());
+        subscribeUI(viewModel.getBusinesses());
     }
 
     private void subscribeUI(LiveData<List<BusinessEntity>>liveData){
         liveData.observe(getViewLifecycleOwner(), myBusiness ->{
             if (myBusiness != null){
                 mBinding.setIsLoading(false);
-                //mBusinessAdapter.setBusinessList(myBusiness); REMAKE BUSINESSLISTADAPTER!!!
+                mBusinessAdapter.setBusinessList(myBusiness);
             } else {
                 mBinding.setIsLoading(true);
             }
@@ -78,7 +82,7 @@ public class BusinessListFragment extends Fragment {
 
     private final BusinessClickCallback mBusinessClickCallback = business -> {
       if (getLifecycle().getCurrentState().isAtLeast(Lifecycle.State.STARTED)) {
-          ((MainActivity) requireActivity()).show(business);
+          ((BusinessListDisplayActivity) requireActivity()).show(business);
       }
     };
 }

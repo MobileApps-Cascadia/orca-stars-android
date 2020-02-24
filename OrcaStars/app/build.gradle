@@ -80,4 +80,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.fragment:fragment:1.2.0"
 }

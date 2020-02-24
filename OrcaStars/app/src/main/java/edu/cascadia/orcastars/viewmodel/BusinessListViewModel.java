@@ -9,6 +9,8 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.Transformations;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
 
@@ -42,10 +44,12 @@ public class BusinessListViewModel extends AndroidViewModel {
     }
 
     public void setQuery (CharSequence query) {
+
         mSavedStateHandler.set(QUERY_KEY, query);
     }
 
     public LiveData<List<BusinessEntity>> getBusinesses() {
         return mBusiness;
     }
+
 }

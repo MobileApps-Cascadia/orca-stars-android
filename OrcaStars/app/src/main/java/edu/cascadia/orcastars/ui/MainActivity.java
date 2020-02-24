@@ -39,28 +39,14 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                 .addToBackStack("business")
                 .replace(R.id.fragment_container,
                         businessFragment, null).commit();
-    }
+    }//PROBLEM: MainActivity does NOT run the list as the default screen
+
 
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
-
-
-
-    /*Shows the business detail fragment*/
-    /*public void show(Business business){
-        BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
-        getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack("business")
-                .replace(R.id.container, businessFragment, null)
-                .commit();
-    }
-
-    /*Uncommented until other files exist, as to not cause errors*/
-
 
 
     /**
