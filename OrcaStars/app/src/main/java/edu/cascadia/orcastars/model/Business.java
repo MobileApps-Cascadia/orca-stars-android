@@ -8,5 +8,4 @@ public interface Business {
         String getLocation();
         int getLogo();
         int getPhoto();
-
 }

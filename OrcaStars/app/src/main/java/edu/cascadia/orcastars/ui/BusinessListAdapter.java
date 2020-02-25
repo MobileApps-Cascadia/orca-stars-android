@@ -1,28 +1,20 @@
 package edu.cascadia.orcastars.ui;
 
-import android.text.TextUtils;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import javax.annotation.Nullable;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
-import edu.cascadia.orcastars.NavigationHost;
-import edu.cascadia.orcastars.R;
 import edu.cascadia.orcastars.databinding.BusinessItemBinding;
 import edu.cascadia.orcastars.model.Business;
+import edu.cascadia.orcastars.R;
+
+import java.util.List;
 
 public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapter.BusinessViewHolder>{
 
@@ -65,7 +57,7 @@ public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapte
                     return newBusiness.getId() == oldBusiness.getId()
                             && TextUtils.equals(newBusiness.getDescription(), oldBusiness.getDescription())
                             && TextUtils.equals(newBusiness.getName(), oldBusiness.getName())
-                            && newBusiness.getLogo() == oldBusiness.getLogo();
+                            /*&& newBusiness.getLogo() == oldBusiness.getLogo()*/;
                 }
             });
             mBusinessList = businessList;
@@ -90,17 +82,15 @@ public class BusinessListAdapter extends RecyclerView.Adapter<BusinessListAdapte
     }
 
     @Override
-    public int getItemCount(){
-        return mBusinessList == null ? 0 : mBusinessList.size();
-    }
+    public int getItemCount(){ return mBusinessList == null ? 0 : mBusinessList.size(); }
 
     @Override
-    public long getItemId(int position){
-        return mBusinessList.get(position).getId();
-    }
+    public long getItemId(int position){ return mBusinessList.get(position).getId(); }
 
     static class BusinessViewHolder extends RecyclerView.ViewHolder{
+
         final BusinessItemBinding binding;
+
         public BusinessViewHolder(BusinessItemBinding binding){
             super(binding.getRoot());
             this.binding = binding;

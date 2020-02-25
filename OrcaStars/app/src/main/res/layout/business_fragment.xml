@@ -25,32 +25,6 @@
             layout="@layout/business_item"
             app:business="@{businessViewModel.business}"/>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/loading_comments_tv"
-                android:text="123"
-                app:visibleGone="@{isLoading}"/>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/comments_list_wrapper">
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/comment_list"
-                    android:contentDescription="321"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layoutManager="LinearLayoutManager"
-                    app:visibleGone="@{!isLoading}"/>
-            </FrameLayout>
-        </FrameLayout>
-
     </LinearLayout>
 
 </layout>

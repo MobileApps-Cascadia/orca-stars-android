@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="business_photo">Photo: $%d</string>
+    <string name="business_logo">Logo: %d</string>
+    <dimen name="business_item_min_height">100dp</dimen>
+</resources>

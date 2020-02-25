@@ -37,12 +37,12 @@ public class MenuFragment extends Fragment {
             }
         });
 
-         moreButton.setOnClickListener(new View.OnClickListener() {
+        /* moreButton.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
                  ((NavigationHost) getActivity()).navigateTo(new MoreMenuFragment(), true);
              }
-         });
+         });*/
 
         return view;
 

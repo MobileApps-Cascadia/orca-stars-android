@@ -1,11 +1,12 @@
-package edu.cascadia.orcastars.db;
+package edu.cascadia.orcastars.db.dao;
 
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
-import androidx.room.Query;
 import androidx.room.OnConflictStrategy;
+import androidx.room.Query;
+import edu.cascadia.orcastars.db.entity.BusinessEntity;
 
 import java.util.List;
 

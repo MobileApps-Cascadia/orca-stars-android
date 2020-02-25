@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import edu.cascadia.orcastars.R;
-
+/*
 public class MoreMenuFragment extends Fragment {
 
     @Override
@@ -66,4 +66,4 @@ public class MoreMenuFragment extends Fragment {
         return view;
 
     }
-}
+}*/

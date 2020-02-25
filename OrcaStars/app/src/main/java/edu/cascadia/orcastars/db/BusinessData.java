@@ -1,14 +1,18 @@
 package edu.cascadia.orcastars.db;
 
+import edu.cascadia.orcastars.db.entity.BusinessEntity;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import edu.cascadia.orcastars.R;
+
 
 public class BusinessData {
     //DATA HERE
 
-    private static final String[] BusName = new String[]{
+    /*private static final String[] BusName = new String[]{
             "Fishfood X",
             "The Grean Bean",
             "StarStuck",
@@ -71,5 +75,42 @@ public class BusinessData {
             businesses.add(business);
         }
         return businesses;
-    };
+    };*/
+
+
+//////////////////////////TEST/////////////////////////
+
+    private static final String[] FIRST = new String[]{
+            "Special edition", "New", "Cheap", "Quality", "Used"};
+    private static final String[] SECOND = new String[]{
+            "Three-headed Monkey", "Rubber Chicken", "Pint of Grog", "Monocle"};
+    private static final String[] DESCRIPTION = new String[]{
+            "is finally here", "is recommended by Stan S. Stanman",
+            "is the best sold product on Mêlée Island", "is \uD83D\uDCAF", "is ❤️", "is fine"};
+    private static final String[] HOURS = new String[]{
+            "Comment 1", "Comment 2", "Comment 3", "Comment 4", "Comment 5", "Comment 6"};
+    private static final String[] LOCATION = new String[]{
+            "Comment 7", "Comment 8", "Comment 9", "Comment 10", "Comment 11", "Comment 12"};
+    private static final Integer[] LOGO = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    private static final Integer[] PHOTO = new Integer[]{11, 22, 33, 44, 55, 66, 77, 88, 99};
+
+    public static List<BusinessEntity> generateBusinesses() {
+        List<BusinessEntity> businesses = new ArrayList<>(FIRST.length * SECOND.length);
+        Random rnd = new Random();
+        for (int i = 0; i < FIRST.length; i++) {
+            for (int j = 0; j < SECOND.length; j++) {
+                BusinessEntity business = new BusinessEntity();
+                business.setName(FIRST[i] + " " + SECOND[j]);
+                business.setDescription(business.getName() + " " + DESCRIPTION[j]);
+                business.setHours(HOURS[i]);
+                business.setLocation(LOCATION[i]);
+                business.setId(FIRST.length * i + j + 1);
+                business.setLogo(LOGO.length * i + j + 3);
+                business.setPhoto(PHOTO.length * i + j + 3);
+                businesses.add(business);
+            }
+        }
+        return businesses;
+    }
+
 }

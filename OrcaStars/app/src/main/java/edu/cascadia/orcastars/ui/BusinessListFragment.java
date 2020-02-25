@@ -14,15 +14,12 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 
-import java.util.List;
-
 import edu.cascadia.orcastars.R;
 import edu.cascadia.orcastars.databinding.BusinessListFragmentBinding;
-import edu.cascadia.orcastars.db.BusinessEntity;
+import edu.cascadia.orcastars.db.entity.BusinessEntity;
 import edu.cascadia.orcastars.viewmodel.BusinessListViewModel;
 
-
-/// red items missing business frag and xml
+import java.util.List;
 
 public class BusinessListFragment extends Fragment {
 
@@ -42,29 +39,33 @@ public class BusinessListFragment extends Fragment {
         mBinding.businessesList.setAdapter(mBusinessAdapter);
 
         return mBinding.getRoot();
-    };
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final BusinessListViewModel viewmodel =
+        final BusinessListViewModel viewModel =
                 new ViewModelProvider(this).get(BusinessListViewModel.class);
 
         mBinding.businessesSearchBtn.setOnClickListener(v -> {
             Editable query = mBinding.businessesSearchBox.getText();
-            viewmodel.setQuery(query);
+            viewModel.setQuery(query);
         });
-        subscribeUI(viewmodel.getBusinesses());
+
+        subscribeUI(viewModel.getBusinesses());
     }
 
-    private void subscribeUI(LiveData<List<BusinessEntity>>liveData){
-        liveData.observe(getViewLifecycleOwner(), myBusiness ->{
-            if (myBusiness != null){
+    private void subscribeUI(LiveData<List<BusinessEntity>>liveData) {
+
+        liveData.observe(getViewLifecycleOwner(), myBusinesses ->{
+            if (myBusinesses != null){
                 mBinding.setIsLoading(false);
-                //mBusinessAdapter.setBusinessList(myBusiness); REMAKE BUSINESSLISTADAPTER!!!
+                mBusinessAdapter.setBusinessList(myBusinesses); //REMAKE BUSINESSLISTADAPTER!!!
             } else {
                 mBinding.setIsLoading(true);
             }
+
+
             mBinding.executePendingBindings();
         });
     }

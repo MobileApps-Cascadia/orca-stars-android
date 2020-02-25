@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
-
+/*
 public class BusinessMoreListAdapter extends RecyclerView.Adapter<BusinessMoreListAdapter.RestaurantViewHolder>{
     public class RestaurantViewHolder extends RecyclerView.ViewHolder {
 
         public RestaurantViewHolder(@NonNull View itemView) {
             super(itemView);
-            restaurantLogo = (ImageView) itemView.findViewById(R.id.business_logo);
-            restaurantName = (TextView) itemView.findViewById(R.id.business_name);
+            //restaurantLogo = (ImageView) itemView.findViewById(R.id.business_logo);
+            //restaurantName = (TextView) itemView.findViewById(R.id.business_name);
         }
 
         public ImageView restaurantLogo;
@@ -74,9 +74,9 @@ public class BusinessMoreListAdapter extends RecyclerView.Adapter<BusinessMoreLi
         public ViewHolder(View v){
             super(v);
 
-            nameImageView = (ImageView) v.findViewById(R.id.business_logo);
-            nameTextView = (TextView) v.findViewById(R.id.business_name);
+            //nameImageView = (ImageView) v.findViewById(R.id.business_logo);
+            //nameTextView = (TextView) v.findViewById(R.id.business_name);
         }
     }
 }
-
+*/

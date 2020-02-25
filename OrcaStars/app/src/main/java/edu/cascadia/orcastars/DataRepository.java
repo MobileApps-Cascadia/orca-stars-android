@@ -1,12 +1,11 @@
 package edu.cascadia.orcastars;
 
-import java.util.List;
-
-import edu.cascadia.orcastars.db.AppDatabase;
-import edu.cascadia.orcastars.db.BusinessEntity;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
+import edu.cascadia.orcastars.db.AppDatabase;
+import edu.cascadia.orcastars.db.entity.BusinessEntity;
+
+import java.util.List;
 
 public class DataRepository {
 
@@ -42,12 +41,13 @@ public class DataRepository {
     public LiveData<List<BusinessEntity>> getBusinesses(){
         return mObservableBusinesses;
     }
-    public LiveData<BusinessEntity> loadBusiness(final int businessId){
+
+    public LiveData<BusinessEntity> loadBusiness(final int businessId) {
         return mDatabase.businessDAO().loadBusiness(businessId);
     }
     public LiveData<List<BusinessEntity>> searchBusinesses(String query) {
         return mDatabase.businessDAO().searchAllBusinesses(query);
     }
 
-    }
+}
 

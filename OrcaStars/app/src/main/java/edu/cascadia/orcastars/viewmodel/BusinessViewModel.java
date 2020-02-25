@@ -12,10 +12,7 @@ import androidx.databinding.ObservableField;
 
 import edu.cascadia.orcastars.OrcaStarsApp;
 import edu.cascadia.orcastars.DataRepository;
-import edu.cascadia.orcastars.db.BusinessEntity;
-
-import java.util.List;
-
+import edu.cascadia.orcastars.db.entity.BusinessEntity;
 
 
 public class BusinessViewModel extends AndroidViewModel {

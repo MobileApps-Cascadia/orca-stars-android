@@ -22,8 +22,6 @@ public class BusinessFragment extends Fragment {
 
     private BusinessFragmentBinding mBinding;
 
-    private BusinessListAdapter mBusinessAdapter;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -60,7 +58,7 @@ public class BusinessFragment extends Fragment {
         super.onDestroyView();
     }
 
-    /** Creates product fragment for specific business ID */
+    /** Creates business fragment for specific business ID */
     public static BusinessFragment forBusiness(int businessId) {
         BusinessFragment fragment = new BusinessFragment();
         Bundle args = new Bundle();

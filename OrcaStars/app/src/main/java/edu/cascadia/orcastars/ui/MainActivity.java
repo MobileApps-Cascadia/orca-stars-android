@@ -14,7 +14,6 @@ import edu.cascadia.orcastars.model.Business;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
 
-
     //Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +22,15 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
 
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(R.id.container, new MenuFragment())
-                    .commit();
+            //BusinessListFragment fragment = new BusinessListFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.container, new MenuFragment()).commit();
+            //getSupportFragmentManager().beginTransaction().add(R.id.container, fragment, BusinessListFragment.TAG).commit();
         }
 
     }
 
     public void show(Business business) {
+
         BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
 
         getSupportFragmentManager()

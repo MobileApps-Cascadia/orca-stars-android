@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.BusinessListFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -20,8 +17,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="8dp"
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:layout_marginEnd="@dimen/item_horizontal_margin"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -40,22 +37,22 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/loading_tv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/loading_businesses"
-            android:textAlignment="center"
-            app:visibleGone="@{isLoading}"/>
+            <TextView
+                android:id="@+id/loading_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/loading_businesses"
+                android:textAlignment="center"
+                app:visibleGone="@{isLoading}"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/businesses_list"
-            android:contentDescription="@string/cd_businesses_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="LinearLayoutManager"
-            app:visibleGone="@{!isLoading}"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/businesses_list"
+                android:contentDescription="@string/cd_businesses_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="LinearLayoutManager"
+                app:visibleGone="@{!isLoading}"/>
 
-        </LinearLayout>
+    </LinearLayout>
 </layout>
