@@ -65,8 +65,8 @@ public class BusinessData {
 
 
     public static List<BusinessEntity> generateBusinesses() {
-        List<BusinessEntity> businesses = new ArrayList<>(BusName.length);
-        for (int i = 0; i < businesses.size(); i++) {
+        List<BusinessEntity> businesses = new ArrayList<>();
+        for (int i = 0; i < BusName.length; i++) {
             BusinessEntity business = new BusinessEntity(i, BusName[i], BusDesc[i], BusHours[i], BusLocation[i], BusLogo[i], BusPhoto[i]);
             businesses.add(business);
         }

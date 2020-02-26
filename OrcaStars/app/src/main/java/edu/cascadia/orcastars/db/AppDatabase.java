@@ -44,7 +44,7 @@ public abstract class AppDatabase extends RoomDatabase {
                         super.onCreate(db);
                         executors.getmDiskIO().execute(() -> {
                             //add delay to simulate loading data
-                            addDelay();
+                            //addDelay();
                             //Generate data for pre-population
                             AppDatabase database = AppDatabase.getInstance(appContext, executors);
                             List<BusinessEntity> businesses = BusinessData.generateBusinesses();
