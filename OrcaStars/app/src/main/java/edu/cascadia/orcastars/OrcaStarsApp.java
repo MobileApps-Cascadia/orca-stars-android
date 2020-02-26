@@ -2,7 +2,7 @@ package edu.cascadia.orcastars;
 
 import android.app.Application;
 
-import edu.cascadia.orcastars.DB.AppDatabase;
+import edu.cascadia.orcastars.db.AppDatabase;
 
 public class OrcaStarsApp extends Application {
     private AppExecutors mAppExecutors;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+        <variable
+            name="businessViewModel"
+            type="edu.cascadia.orcastars.viewmodel.BusinessViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background_gradient"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/business_item"
+            app:business="@{businessViewModel.business}"/>
+
+        <!--delete stuff below when recview can display-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/loading_comments_tv"
+                android:text="Loading comments..."
+                app:visibleGone="@{isLoading}"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/comments_list_wrapper">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comment_list"
+                    android:contentDescription="321"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="LinearLayoutManager"
+                    app:visibleGone="@{!isLoading}"/>
+            </FrameLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

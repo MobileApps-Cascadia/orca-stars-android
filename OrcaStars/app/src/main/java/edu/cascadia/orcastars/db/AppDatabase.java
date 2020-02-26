@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.DB;
+package edu.cascadia.orcastars.db;
 
 import android.content.Context;
 
@@ -14,9 +14,8 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.List;
 
 import edu.cascadia.orcastars.AppExecutors;
-import edu.cascadia.orcastars.DataRepository;
 
-@Database(entities = {BusinessEntity.class}, version = 1)
+@Database(entities = {BusinessEntity.class, BusinessFtsEntity.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     public static AppDatabase sInstance;
     @VisibleForTesting
@@ -45,7 +44,7 @@ public abstract class AppDatabase extends RoomDatabase {
                         super.onCreate(db);
                         executors.getmDiskIO().execute(() -> {
                             //add delay to simulate loading data
-                            addDelay();
+                            //addDelay();
                             //Generate data for pre-population
                             AppDatabase database = AppDatabase.getInstance(appContext, executors);
                             List<BusinessEntity> businesses = BusinessData.generateBusinesses();

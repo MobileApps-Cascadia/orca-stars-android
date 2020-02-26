@@ -1,4 +1,4 @@
-package edu.cascadia.orcastars.UI;
+package edu.cascadia.orcastars.ui;
 
 
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
+import edu.cascadia.orcastars.model.Business;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {
@@ -28,7 +29,17 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .commit();
         }
 
-        }
+    }
+
+    public void show(Business business) {
+        BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack("business")
+                .replace(R.id.fragment_container,
+                        businessFragment, null).commit();
+    }//PROBLEM: MainActivity does NOT run the list as the default screen
 
 
     @Override
@@ -36,21 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         onBackPressed();
         return true;
     }
-
-
-
-    /*Shows the business detail fragment*/
-    /*public void show(Business business){
-        BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
-        getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack("business")
-                .replace(R.id.container, businessFragment, null)
-                .commit();
-    }
-
-    /*Uncommented until other files exist, as to not cause errors*/
-
 
 
     /**
