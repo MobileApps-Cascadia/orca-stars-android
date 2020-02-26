@@ -14,14 +14,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
         android:background="@drawable/main_background_gradient"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/item_horizontal_margin"
-            android:layout_marginEnd="@dimen/item_horizontal_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="8dp"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatEditText

@@ -12,20 +12,14 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModelProvider;
-
-import java.util.List;
 
 import edu.cascadia.orcastars.R;
 import edu.cascadia.orcastars.databinding.BusinessListFragmentBinding;
 import edu.cascadia.orcastars.db.BusinessEntity;
 import edu.cascadia.orcastars.viewmodel.BusinessListViewModel;
-import edu.cascadia.orcastars.viewmodel.BusinessViewModel;
-import edu.cascadia.orcastars.model.Business;
 
-
-/// red items missing business frag and xml
+import java.util.List;
 
 public class BusinessListFragment extends Fragment {
 
@@ -58,14 +52,15 @@ public class BusinessListFragment extends Fragment {
             Editable query = mBinding.businessesSearchBox.getText();
             viewModel.setQuery(query);
         });
+
         subscribeUI(viewModel.getBusinesses());
     }
 
     private void subscribeUI(LiveData<List<BusinessEntity>>liveData){
-        liveData.observe(getViewLifecycleOwner(), myBusiness ->{
-            if (myBusiness != null){
+        liveData.observe(getViewLifecycleOwner(), myBusinesses ->{
+            if (myBusinesses != null){
                 mBinding.setIsLoading(false);
-                mBusinessAdapter.setBusinessList(myBusiness);
+                mBusinessAdapter.setBusinessList(myBusinesses);
             } else {
                 mBinding.setIsLoading(true);
             }

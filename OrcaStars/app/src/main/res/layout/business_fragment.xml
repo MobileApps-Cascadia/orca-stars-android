@@ -25,6 +25,7 @@
             layout="@layout/business_item"
             app:business="@{businessViewModel.business}"/>
 
+        <!--delete stuff below when recview can display-->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -33,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/loading_comments_tv"
-                android:text="123"
+                android:text="Loading comments..."
                 app:visibleGone="@{isLoading}"/>
 
             <FrameLayout
