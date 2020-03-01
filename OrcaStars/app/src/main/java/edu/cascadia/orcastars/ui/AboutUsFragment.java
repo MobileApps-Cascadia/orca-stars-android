@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import edu.cascadia.orcastars.BuildConfig;
+import edu.cascadia.orcastars.NavigationHost;
 import edu.cascadia.orcastars.R;
 import mehdi.sakout.aboutpage.AboutPage;
 import mehdi.sakout.aboutpage.Element;
@@ -30,7 +32,15 @@ public class AboutUsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //View myView = inflater.inflate(R.layout.fragment_about_us, container, false);
+        View myView = inflater.inflate(R.layout.fragment_about_us, container, false);
+
+        ImageButton homeButton = myView.findViewById(R.id.iconhome);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NavigationHost) getActivity()).navigateTo(new MenuFragment(), true);
+            }
+        });
 
         Element adsElement = new Element();
         adsElement.setTitle("Advertise with us");

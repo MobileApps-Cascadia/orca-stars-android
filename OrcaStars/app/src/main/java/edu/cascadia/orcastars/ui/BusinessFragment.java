@@ -1,9 +1,11 @@
 package edu.cascadia.orcastars.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +24,6 @@ public class BusinessFragment extends Fragment {
 
     private BusinessFragmentBinding mBinding;
 
-    private BusinessListAdapter mBusinessAdapter;
 
     @Nullable
     @Override
@@ -31,8 +32,10 @@ public class BusinessFragment extends Fragment {
         // Inflate this data binding layout
         mBinding = DataBindingUtil.inflate(inflater, R.layout.business_fragment, container, false);
 
+
         return mBinding.getRoot();
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -45,6 +48,9 @@ public class BusinessFragment extends Fragment {
         mBinding.setBusinessViewModel(model);
 
         subscribeToModel(model);
+
+
+
     }
 
     private void subscribeToModel(final BusinessViewModel model) {
@@ -52,7 +58,17 @@ public class BusinessFragment extends Fragment {
         // Observe business data
         model.getObservableBusiness().observe(getViewLifecycleOwner(), model::setBusiness);
 
+
     }
+
+    //CORRECT CODE, BUT INCORRECT PLACEMENT. DOESN'T WORK.
+    public void mapButton(){
+        mBinding.businessDescription.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MapsActivity.class);
+            startActivity(intent);
+        });
+    }
+
 
     @Override
     public void onDestroyView() {

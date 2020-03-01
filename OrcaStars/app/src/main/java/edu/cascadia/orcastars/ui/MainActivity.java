@@ -31,16 +31,6 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
 
     }
 
-    public void show(Business business) {
-        BusinessFragment businessFragment = BusinessFragment.forBusiness(business.getId());
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack("business")
-                .replace(R.id.fragment_container,
-                        businessFragment, null).commit();
-    }//PROBLEM: MainActivity does NOT run the list as the default screen
-
 
     @Override
     public boolean onSupportNavigateUp() {

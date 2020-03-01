@@ -3,9 +3,37 @@
     android:id="@+id/aboutUs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.cascadia.orcastars.ui.AboutUsFragment">
+    tools:context="edu.cascadia.orcastars.ui.AboutUsFragment"
+    android:background="@drawable/main_background_gradient">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageButton
+                android:id="@+id/iconhome"
+                style="@style/homeicons"
+                android:background="@drawable/ic_home_black_48dp"
+                android:backgroundTint="@color/orcaBelly" />
+
+            <ImageButton
+                android:id="@+id/iconinfo"
+                style="@style/homeicons"
+                android:background="@drawable/ic_info_black_48dp"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_toRightOf="@+id/iconhome"
+                android:layout_toEndOf="@id/iconhome"/>
+        </RelativeLayout>
+    </RelativeLayout>
 
 
 </FrameLayout>

@@ -11,14 +11,14 @@ public class BusinessListDisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null){
             BusinessListFragment fragment = new BusinessListFragment();
 
             getSupportFragmentManager()
                     .beginTransaction()
-                    .add(R.id.fragment_container, fragment,BusinessListFragment.TAG)
+                    .add(R.id.container, fragment,BusinessListFragment.TAG)
                     .commit();
         }
     }
@@ -30,7 +30,7 @@ public class BusinessListDisplayActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .addToBackStack("business")
-                .replace(R.id.fragment_container,
+                .replace(R.id.container,
                         businessFragment, null).commit();
     }
 }
