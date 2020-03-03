@@ -10,7 +10,7 @@ public class BusinessData {
 
     private static final String[] BusName = new String[]{
             "Fishfood X",
-            "The Grean Bean",
+            "The Green Bean",
             "StarStuck",
             "Grillby's",
             "Another Sushi Place",
