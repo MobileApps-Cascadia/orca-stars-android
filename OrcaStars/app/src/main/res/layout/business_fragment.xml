@@ -83,7 +83,7 @@
             android:textSize="20sp"
             android:layout_below="@id/large_business_name"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="50dp"/>
 
 
         <ImageView

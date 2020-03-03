@@ -1,5 +1,6 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/aboutUs"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +8,169 @@
     android:background="@drawable/main_background_gradient">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="25dp"
+                android:background="@drawable/orcastarsaboutuslogo"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                style="@style/Standard_Text"
+                android:textAlignment="center"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connect with us!"
+                style="@style/Standard_Text"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_email"
+                    android:id="@+id/emailIcon"
+                    style="@style/icon_about_us"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Contact Us"
+                    android:autoLink="web"
+                    android:id="@+id/emailText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    />
+                <!---->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_link"
+                    android:id="@+id/webIcon"
+                    style="@style/icon_about_us"
+                    android:layout_below="@id/emailText"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Visit our website"
+                    android:autoLink="web"
+                    android:id="@+id/webText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    android:layout_below="@id/emailText"
+                    />
+                <!---->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_facebook"
+                    android:id="@+id/fbIcon"
+                    style="@style/icon_about_us"
+                    android:layout_below="@id/webText"
+                    android:backgroundTint="@color/about_facebook_color"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Like us on Facebook"
+                    android:autoLink="web"
+                    android:id="@+id/fbText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    android:layout_below="@id/webText"
+                    />
+                <!---->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_twitter"
+                    android:id="@+id/twitterIcon"
+                    style="@style/icon_about_us"
+                    android:layout_below="@id/fbText"
+                    android:backgroundTint="@color/about_twitter_color"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Follow us on Twitter"
+                    android:autoLink="web"
+                    android:id="@+id/twitterText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    android:layout_below="@id/fbText"
+                    />
+                <!---->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_instagram"
+                    android:id="@+id/instaIcon"
+                    style="@style/icon_about_us"
+                    android:layout_below="@id/twitterText"
+                    android:backgroundTint="@color/about_instagram_color"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Follow us on Instagram"
+                    android:autoLink="web"
+                    android:id="@+id/instaText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    android:layout_below="@id/twitterText"
+                    />
+                <!---->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/about_icon_youtube"
+                    android:id="@+id/ytIcon"
+                    style="@style/icon_about_us"
+                    android:layout_below="@id/instaText"
+                    android:backgroundTint="@color/about_youtube_color"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Watch us on YouTube"
+                    android:autoLink="web"
+                    android:id="@+id/ytText"
+                    android:paddingStart="35dp"
+                    style="@style/Standard_Text_about_us"
+                    android:layout_below="@id/instaText"
+                    android:layout_marginBottom="50dp"/>
+                <!---->
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,4 +200,4 @@
     </RelativeLayout>
 
 
-</FrameLayout>
+</RelativeLayout>

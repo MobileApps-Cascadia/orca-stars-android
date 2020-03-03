@@ -1,14 +1,19 @@
 package edu.cascadia.orcastars.ui;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import edu.cascadia.orcastars.BuildConfig;
 import edu.cascadia.orcastars.NavigationHost;
@@ -23,18 +28,14 @@ import mehdi.sakout.aboutpage.Element;
 public class AboutUsFragment extends Fragment {
 
 
-    public AboutUsFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(
+            @NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myView = inflater.inflate(R.layout.fragment_about_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_about_us, container, false);
 
-        ImageButton homeButton = myView.findViewById(R.id.iconhome);
+        ImageButton homeButton = view.findViewById(R.id.iconhome);
+
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,25 +43,56 @@ public class AboutUsFragment extends Fragment {
             }
         });
 
-        Element adsElement = new Element();
-        adsElement.setTitle("Advertise with us");
+        TextView email = view.findViewById(R.id.emailText);
+        email.setMovementMethod(LinkMovementMethod.getInstance());
+        email.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("mailto:orcaconservancy@gmail.com"));
+            startActivity(browserIntent);
+        });
 
-        AboutPage aboutPage = new AboutPage(getContext())
-                .isRTL(false)
-                .setImage(R.drawable.orcastarsaboutuslogo)
-                .setDescription(getString(R.string.description))
-                .addItem(new Element("Version " + BuildConfig.VERSION_NAME, R.drawable.ic_info_black_48dp))
-                .addGroup("Connect with us")
-                .addEmail("orcaconservancy@gmail.com")
-                .addWebsite(getString(R.string.FRONTEND_HOST))
-                .addFacebook(getString(R.string.FACEBOOK_ID))
-                .addTwitter(getString(R.string.TWITTER_ID))
-                .addInstagram(getString(R.string.INSTAGRAM_ID))
-                .addYoutube("UC4q-CpaiV1KrPCSUpQYXfdg");
+        TextView web = view.findViewById(R.id.webText);
+        web.setMovementMethod(LinkMovementMethod.getInstance());
+        web.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("https://www.orcaconservancy.org/5-2/orca-stars/"));
+            startActivity(browserIntent);
+        });
 
-        View aboutPageView = aboutPage.create();
-        return aboutPageView;
-        }
+        TextView fb = view.findViewById(R.id.fbText);
+        fb.setMovementMethod(LinkMovementMethod.getInstance());
+        fb.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("https://www.facebook.com/OrcaConservancy/"));
+            startActivity(browserIntent);
+        });
+
+        TextView twitter = view.findViewById(R.id.twitterText);
+        twitter.setMovementMethod(LinkMovementMethod.getInstance());
+        twitter.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("https://twitter.com/OrcaConservancy"));
+            startActivity(browserIntent);
+        });
+
+        TextView insta = view.findViewById(R.id.instaText);
+        insta.setMovementMethod(LinkMovementMethod.getInstance());
+        insta.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("https://www.instagram.com/orcaconservancy/"));
+            startActivity(browserIntent);
+        });
+
+        TextView yt = view.findViewById(R.id.ytText);
+        yt.setMovementMethod(LinkMovementMethod.getInstance());
+        yt.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
+            browserIntent.setData(Uri.parse("https://www.youtube.com/channel/UC4q-CpaiV1KrPCSUpQYXfdg"));
+            startActivity(browserIntent);
+        });
+
+        return view;
 
     }
+}
 
