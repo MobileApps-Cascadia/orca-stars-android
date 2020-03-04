@@ -40,18 +40,6 @@ public class BusinessMoreListAdapter extends RecyclerView.Adapter<BusinessMoreLi
         View LayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.business_list_item, parent, false);
 
         final RestaurantViewHolder holdViewOfBusinessListItem = new BusinessMoreListAdapter.RestaurantViewHolder(LayoutView);
-        Button goToBusiness = LayoutView.findViewById(R.id.SelectedItem);
-        goToBusiness.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int indexOfClickedItem = holdViewOfBusinessListItem.getAdapterPosition();
-                switch(indexOfClickedItem){
-                    case 1:
-                        ((NavigationHost) parent.getContext()).navigateTo(new BusinessFragment(), true);
-                }
-
-            }
-        });
 
         return holdViewOfBusinessListItem;
     }

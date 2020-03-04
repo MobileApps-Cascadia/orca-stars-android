@@ -12,21 +12,33 @@ public class BusinessData {
             "Fishfood X",
             "The Green Bean",
             "StarStuck",
-            "Grillby's",
+            "Grillbits",
             "Another Sushi Place",
             "BurgerBox",
-            "MTT Cafe"
+            "Metatonic Cafe",
+            "RestStop #1",
+            "Verdant Drink",
+            "Jora's Brunch",
+            "Ty's Thai Food"
     };
     private static final String[] BusDesc = new String[]{
             "Best place ever!",
             "We sell GREEN tea!",
             "Totally not stuck...",
-            "Monster food makes zero waste!",
+            "Pixelated food makes zero waste!",
             "There are too many.",
             "We actually exist! Ooops!",
-            "MTT Brand everything!"
+            "MTT Brand!",
+            "The best place for sustainable food on the go!",
+            "We have many salads and teas!",
+            "Enjoy our brunch!",
+            "Ty Tie's Thai Treats."
     };
     private static final String[] BusHours = new String[]{
+            "9am-9pm, Mon-Fri",
+            "9am-9pm, Mon-Fri",
+            "9am-9pm, Mon-Fri",
+            "9am-9pm, Mon-Fri",
             "9am-9pm, Mon-Fri",
             "9am-9pm, Mon-Fri",
             "9am-9pm, Mon-Fri",
@@ -43,6 +55,10 @@ public class BusinessData {
             "Google it.",
             "Google it.",
             "Google it.",
+            "Google it.",
+            "Google it.",
+            "Google it.",
+            "Google it.",
     };
     private static final Integer[] BusLogo = new Integer[]{
             R.drawable.fishfood_x,
@@ -52,9 +68,17 @@ public class BusinessData {
             R.drawable.another_sushi_place,
             R.drawable.burgerbox,
             R.drawable.mtt_cafe,
+            R.drawable.orca_stars,
+            R.drawable.orca_stars,
+            R.drawable.orca_stars,
+            R.drawable.orca_stars,
     };
     private static final Integer[] BusPhoto = new Integer[]{
             R.drawable.sushi,
+            R.drawable.hobbit,
+            R.drawable.hobbit,
+            R.drawable.hobbit,
+            R.drawable.hobbit,
             R.drawable.hobbit,
             R.drawable.hobbit,
             R.drawable.hobbit,
