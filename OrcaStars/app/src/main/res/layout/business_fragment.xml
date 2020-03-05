@@ -73,6 +73,7 @@
                 android:layout_alignTop="@id/large_business_name"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
+                android:id="@+id/favstar"
                 android:layout_marginTop="5dp"/>
 
 
@@ -83,6 +84,7 @@
             android:text="@{businessViewModel.business.description}"
             android:textColor="@color/colorBlack"
             android:layout_alignStart="@id/large_business_name"
+            android:layout_alignEnd="@id/favstar"
             android:textSize="20sp"
             android:layout_below="@id/large_business_name"
             android:layout_marginTop="10dp"
