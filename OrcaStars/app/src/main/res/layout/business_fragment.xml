@@ -16,10 +16,13 @@
             type="edu.cascadia.orcastars.viewmodel.BusinessViewModel" />
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background_gradient">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/main_background_gradient"
         android:orientation="vertical">
 
         <!--
@@ -70,6 +73,7 @@
                 android:layout_alignTop="@id/large_business_name"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
+                android:id="@+id/favstar"
                 android:layout_marginTop="5dp"/>
 
 
@@ -80,6 +84,7 @@
             android:text="@{businessViewModel.business.description}"
             android:textColor="@color/colorBlack"
             android:layout_alignStart="@id/large_business_name"
+            android:layout_alignEnd="@id/favstar"
             android:textSize="20sp"
             android:layout_below="@id/large_business_name"
             android:layout_marginTop="10dp"
@@ -126,7 +131,8 @@
                 android:layout_toEndOf="@id/hours_icon"
                 android:layout_alignTop="@id/hours_icon"
                 android:textColor="@color/colorBlack"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -145,5 +151,5 @@
 
 
     </LinearLayout>
-
+    </ScrollView>
 </layout>
