@@ -8,8 +8,8 @@ android {
         applicationId "edu.cascadia.mobas.orcastars"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "0.1"
+        versionCode 2
+        versionName "Closed Test: Winter 2020"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resValue "string", "FACEBOOK_ID", "OrcaConservancy"
         resValue "string", "TWITTER_ID", "OrcaConservancy"
