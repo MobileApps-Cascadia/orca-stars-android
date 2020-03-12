@@ -9,7 +9,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 2
-        versionName "0.2"
+        versionName "Closed Test: Winter 2020"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resValue "string", "FACEBOOK_ID", "OrcaConservancy"
         resValue "string", "TWITTER_ID", "OrcaConservancy"
