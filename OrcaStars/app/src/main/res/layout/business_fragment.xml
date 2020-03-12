@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+
+        <variable
+            name="businessViewModel"
+            type="edu.cascadia.orcastars.viewmodel.BusinessViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_background_gradient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--
+        <include
+            layout="@layout/business_item"
+            app:business="@{businessViewModel.business}" />
+            -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:imageResource="@{businessViewModel.business.photo}"
+            android:id="@+id/business_photo" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:layout_alignEnd="@id/business_photo"
+            android:layout_alignBottom="@id/business_photo"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="See all photos"
+            android:paddingHorizontal="7dp"
+            android:textSize="15dp"
+            android:id="@+id/see_all_photos_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{businessViewModel.business.name}"
+            android:textColor="@color/colorBlack"
+            android:textSize="35sp"
+            android:layout_margin="20dp"
+            android:id="@+id/large_business_name"
+            android:layout_below="@id/business_photo"/>
+
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_star_border_black_48dp"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_alignTop="@id/large_business_name"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/favstar"
+                android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/business_description"
+            android:text="@{businessViewModel.business.description}"
+            android:textColor="@color/colorBlack"
+            android:layout_alignStart="@id/large_business_name"
+            android:layout_alignEnd="@id/favstar"
+            android:textSize="20sp"
+            android:layout_below="@id/large_business_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"/>
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_room_black_48dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/location_icon"
+            android:layout_below="@id/business_description"
+            android:layout_alignStart="@id/large_business_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{businessViewModel.business.location}"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/location_icon"
+            android:layout_alignTop="@id/location_icon"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/location_text"
+            android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_query_builder_black_48dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/hours_icon"
+                android:layout_below="@id/location_icon"
+                android:layout_marginTop="15dp"
+                android:layout_alignStart="@id/large_business_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{businessViewModel.business.hours}"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@id/hours_icon"
+                android:layout_alignTop="@id/hours_icon"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_above="@id/hours_icon"
+                android:layout_marginEnd="15dp"
+                android:text="Directions"
+                android:paddingHorizontal="7dp"
+                android:textSize="15dp"
+                android:id="@+id/directions_button"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</layout>

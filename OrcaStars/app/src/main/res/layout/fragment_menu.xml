@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuFragment">
+    tools:context=".ui.MenuFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -26,12 +26,12 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="15dp"/>
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/orcasPic"
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/orcas"
-                    android:layout_gravity="center_horizontal"/>
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/orcas_rounded_150px" />
 
             <TextView
                 android:layout_width="match_parent"

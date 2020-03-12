@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <!--THIS IS FOR THE MORE MENU, AND IS NOT CONNECTED TO THE DATABASE. :)-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:id="@+id/SelectedItem"
+        android:background="@color/transparent" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -10,12 +17,14 @@
         android:paddingBottom="10dp">
 
         <ImageView
+            android:id="@+id/business_logo"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:text="Image"
             android:layout_weight="2"
             android:gravity="center"
-            android:src="@drawable/orca_stars"/>
+            android:src="@drawable/orca_stars"
+            android:layout_marginTop="5dp"/>
 
         <TextView
             android:id="@+id/business_name"
@@ -24,7 +33,7 @@
             android:layout_weight="1"
             android:text="Business Name"
             android:textColor="@color/colorBlack"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:layout_marginTop="25dp"
 
             android:textAlignment="textStart"/>
@@ -32,4 +41,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
